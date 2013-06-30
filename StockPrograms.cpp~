@@ -229,7 +229,7 @@ ChasingWhiteRedBlue::ChasingWhiteRedBlue(G35& g35)
   : LightProgram(g35), count_(1), sequence_(0) {}
 
 void ChasingWhiteRedBlue::Init() {
-  g35_.fill_sequence(0, 3, G35::MAX_INTENSITY, red_white_blue);
+  g35_.fill_sequence(3, light_count_, G35::MAX_INTENSITY, red_white_blue);
   //g35_.fill_color(0, light_count_, 0, COLOR_WHITE);
   //g35_.broadcast_intensity(G35::MAX_INTENSITY);
 }

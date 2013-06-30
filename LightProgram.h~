@@ -23,7 +23,7 @@ class LightProgram {
    : g35_(g35), light_count_(g35.get_light_count()),
     bulb_frame_(g35.get_bulb_frame()) {}
 
-  virtual void Init() {}
+  void Init() {}
 
   // Do a single slice of work. Returns the number of milliseconds before
   // this function should be called again.

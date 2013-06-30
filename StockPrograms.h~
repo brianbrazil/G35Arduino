@@ -145,7 +145,6 @@ class ChasingMultiColors : public LightProgram {
 class ChasingWhiteRedBlue : public LightProgram {
  public:
   ChasingWhiteRedBlue(G35& g35);
-  void Init();
   uint32_t Do();
   static color_t red_white_blue(uint16_t sequence);
 
