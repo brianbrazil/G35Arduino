@@ -135,8 +135,9 @@ class RandomSparkling : public LightProgram {
 class ChasingMultiColors : public LightProgram {
  public:
   ChasingMultiColors(G35& g35);
+  void Init();
   uint32_t Do();
-
+  char* GetName();
  private:
   uint8_t count_;
   uint16_t sequence_;
@@ -147,6 +148,7 @@ class ChasingWhiteRedBlue : public LightProgram {
   ChasingWhiteRedBlue(G35& g35);
   void Init();
   uint32_t Do();
+  char* GetName();
   static color_t red_white_blue(uint16_t sequence);
 
  private:

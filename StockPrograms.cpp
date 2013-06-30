@@ -214,6 +214,10 @@ uint32_t RandomSparkling::Do() {
 ChasingMultiColors::ChasingMultiColors(G35& g35)
   : LightProgram(g35), count_(1), sequence_(0) {}
 
+void ChasingMultiColors::Init() {
+  g35_.fill_sequence(0, 3, G35::MAX_INTENSITY, G35::max_color);
+}
+
 uint32_t ChasingMultiColors::Do() {
   g35_.fill_sequence(0, count_, sequence_, 1, G35::MAX_INTENSITY,
                      G35::max_color);
@@ -225,15 +229,16 @@ uint32_t ChasingMultiColors::Do() {
   return bulb_frame_ * 6;
 }
 
+char* ChasingMultiColors::GetName() {
+    return "ChasingMultiColors";
+}
+
 ChasingWhiteRedBlue::ChasingWhiteRedBlue(G35& g35)
   : LightProgram(g35), count_(1), sequence_(0) {}
 
 void ChasingWhiteRedBlue::Init() {
   g35_.fill_sequence(0, 3, G35::MAX_INTENSITY, red_white_blue);
-  //g35_.fill_color(0, light_count_, 0, COLOR_WHITE);
-  //g35_.broadcast_intensity(G35::MAX_INTENSITY);
 }
-  
 
 uint32_t ChasingWhiteRedBlue::Do() {
   g35_.fill_sequence(0, count_, sequence_, 3, G35::MAX_INTENSITY,
@@ -244,6 +249,10 @@ uint32_t ChasingWhiteRedBlue::Do() {
     ++sequence_;
   }
   return bulb_frame_;
+}
+
+char* ChasingWhiteRedBlue::GetName() {
+  return "ChasingWhiteRedBlue";
 }
 
 // static

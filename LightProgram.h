@@ -28,6 +28,9 @@ class LightProgram {
   // Do a single slice of work. Returns the number of milliseconds before
   // this function should be called again.
   virtual uint32_t Do() = 0;
+
+  virtual char* GetName() { return "No Name :("; }
+
  protected:
   G35& g35_;
   uint8_t light_count_;
