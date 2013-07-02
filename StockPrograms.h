@@ -19,6 +19,7 @@
 class SteadyWhite : public LightProgram {
  public:
   SteadyWhite(G35& g35);
+  void Init();
   uint32_t Do();
   char* GetName() { return "Steady White"; }
 

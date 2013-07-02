@@ -12,6 +12,9 @@
 
 SteadyWhite::SteadyWhite(G35& g35)
   : LightProgram(g35), intensity_(0) {
+}
+
+void SteadyWhite::Init() {
   g35_.fill_color(0, light_count_, 0, COLOR_WHITE);
 }
 
