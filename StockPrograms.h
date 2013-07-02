@@ -20,6 +20,7 @@ class SteadyWhite : public LightProgram {
  public:
   SteadyWhite(G35& g35);
   uint32_t Do();
+  char* GetName() { return "Steady White"; }
 
  private:
   uint8_t intensity_;
@@ -29,6 +30,7 @@ class CrossOverWave : public LightProgram {
  public:
   CrossOverWave(G35& g35);
   uint32_t Do();
+  char* GetName() { return "Crossover Wave"; }
 
  private:
   uint8_t x_;
@@ -40,6 +42,7 @@ class ForwardWave : public LightProgram {
  public:
   ForwardWave(G35& g35);
   uint32_t Do();
+  char* GetName() { return "Forward Wave"; }
 
  private:
   uint8_t x_;
@@ -50,6 +53,7 @@ class ChasingRainbow : public LightProgram {
  public:
   ChasingRainbow(G35& g35);
   uint32_t Do();
+  char* GetName() { return "Chasing Rainbow"; }
 
  private:
   uint8_t count_;
@@ -60,6 +64,7 @@ class AlternateDirectionalWave : public LightProgram {
  public:
   AlternateDirectionalWave(G35& g35);
   uint32_t Do();
+  char* GetName() { return "Alt Directional Wave"; }
 
  private:
   int16_t x_;
@@ -73,6 +78,7 @@ class FadeInFadeOutSolidColors : public LightProgram {
  public:
   FadeInFadeOutSolidColors(G35& g35);
   uint32_t Do();
+  char* GetName() { return "Fade In/Out Solid"; }
 
  private:
   color_t color_;
@@ -84,6 +90,7 @@ class BidirectionalWave : public LightProgram {
  public:
   BidirectionalWave(G35& g35);
   uint32_t Do();
+  char* GetName() { return "Bidrectional Wave"; }
 
  private:
   uint8_t x_;
@@ -97,6 +104,7 @@ class ChasingSolidColors : public LightProgram {
  public:
   ChasingSolidColors(G35& g35);
   uint32_t Do();
+  char* GetName() { return "Chasing Solids"; }
 
  private:
   uint8_t count_;
@@ -107,6 +115,7 @@ class FadeInFadeOutMultiColors : public LightProgram {
  public:
   FadeInFadeOutMultiColors(G35& g35);
   uint32_t Do();
+  char* GetName() {return "Fade In/Out Multi"; }
 
  private:
   uint8_t state_;
@@ -117,6 +126,7 @@ class ChasingTwoColors : public LightProgram {
  public:
   ChasingTwoColors(G35& g35);
   uint32_t Do();
+  char* GetName() { return "Chasing Colors"; }
 
  private:
   uint16_t sequence_;
@@ -126,6 +136,7 @@ class RandomSparkling : public LightProgram {
  public:
   RandomSparkling(G35& g35);
   uint32_t Do();
+  char* GetName() { return "Random Sparkle"; }
 
  private:
   color_t color_;
@@ -137,7 +148,7 @@ class ChasingMultiColors : public LightProgram {
   ChasingMultiColors(G35& g35);
   void Init();
   uint32_t Do();
-  char* GetName();
+  char* GetName() { return "Chasing Multi"; }
  private:
   uint8_t count_;
   uint16_t sequence_;
@@ -148,7 +159,7 @@ class ChasingWhiteRedBlue : public LightProgram {
   ChasingWhiteRedBlue(G35& g35);
   void Init();
   uint32_t Do();
-  char* GetName();
+  char* GetName() { return "Red White & Blue"; }
   static color_t red_white_blue(uint16_t sequence);
 
  private:

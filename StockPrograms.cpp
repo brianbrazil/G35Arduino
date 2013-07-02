@@ -229,10 +229,6 @@ uint32_t ChasingMultiColors::Do() {
   return bulb_frame_ * 6;
 }
 
-char* ChasingMultiColors::GetName() {
-    return "ChasingMultiColors";
-}
-
 ChasingWhiteRedBlue::ChasingWhiteRedBlue(G35& g35)
   : LightProgram(g35), count_(1), sequence_(0) {}
 
@@ -249,10 +245,6 @@ uint32_t ChasingWhiteRedBlue::Do() {
     ++sequence_;
   }
   return bulb_frame_;
-}
-
-char* ChasingWhiteRedBlue::GetName() {
-  return "ChasingWhiteRedBlue";
 }
 
 // static
