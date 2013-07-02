@@ -19,11 +19,13 @@ void SteadyWhite::Init() {
 }
 
 uint32_t SteadyWhite::Do() {
-  if (intensity_ <= G35::MAX_INTENSITY) {
+  int max_white = 90;
+  if (intensity_ < max_white) {
     g35_.broadcast_intensity(intensity_++);
     return bulb_frame_;
   }
-  return 1000;
+  g35_.fill_color(0, light_count_, max_white, COLOR_WHITE);
+  return 2000;
 }
 
 CrossOverWave::CrossOverWave(G35& g35)
