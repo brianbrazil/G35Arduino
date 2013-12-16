@@ -8,21 +8,21 @@
   See README for complete attributions.
 */
 
-#ifndef INCLUDE_G35_PROGRAMS_RED_GREEN_CHASE_H
-#define INCLUDE_G35_PROGRAMS_RED_GREEN_CHASE_H
+#ifndef INCLUDE_G35_PROGRAMS_CANDY_CANE_CHASE_H
+#define INCLUDE_G35_PROGRAMS_CANDY_CANE_CHASE_H
 
 #include <LightProgram.h>
 
-class RedGreenChase : public LightProgram {
+class CandyCaneChase : public LightProgram {
  public:
-  RedGreenChase(G35& g35);
+  CandyCaneChase(G35& g35);
   uint32_t Do();
-  static color_t red_green(uint16_t sequence);
-  char* GetName() { return "Red Green Chasing"; }
+  static color_t red_white(uint16_t sequence);
+  char* GetName() { return "Candy Cane Chasing"; }
 
  private:
   uint8_t count_;
   uint16_t sequence_;
 };
 
-#endif  // INCLUDE_G35_PROGRAMS_RED_GREEN_CHASE_H
+#endif  // INCLUDE_G35_PROGRAMS_CANDY_CANE_CHASE_H

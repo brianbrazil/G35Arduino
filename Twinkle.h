@@ -17,6 +17,7 @@ class Twinkle : public LightProgram {
  public:
   Twinkle(G35& g35);
   uint32_t Do();
+  char* GetName() { return "Twinkle Multi"; }
 };
 
 #endif  // INCLUDE_G35_PROGRAMS_TWINKLE_H
