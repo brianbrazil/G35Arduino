@@ -32,12 +32,12 @@ color_t G35::color(uint8_t r, uint8_t g, uint8_t b) {
 
 color_t G35::color_hue(uint8_t h) {
   switch (h >> 4) {
-  case 0:     h -= 0; return color(h, CHANNEL_MAX, 0);
-  case 1:     h -= 16; return color(CHANNEL_MAX, (CHANNEL_MAX - h), 0);
-  case 2:     h -= 32; return color(CHANNEL_MAX, 0, h);
-  case 3:     h -= 48; return color((CHANNEL_MAX - h), 0, CHANNEL_MAX);
-  case 4:     h -= 64; return color(0, h, CHANNEL_MAX);
-  case 5:     h -= 80; return color(0, CHANNEL_MAX, (CHANNEL_MAX - h));
+  case 0:     h -= 0; return color(h, 0xF, 0);
+  case 1:     h -= 16; return color(0xF, (0xF - h), 0);
+  case 2:     h -= 32; return color(0xF, 0, h);
+  case 3:     h -= 48; return color((0xF - h), 0, 0xF);
+  case 4:     h -= 64; return color(0, h, 0xF);
+  case 5:     h -= 80; return color(0, 0xF, (0xF - h));
   default:
     return COLOR_WHITE;
   }

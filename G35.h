@@ -14,18 +14,18 @@
 
 #define color_t uint16_t
 #define CHANNEL_MAX           (0xF)   // Each color channel is 4-bit
-#define HUE_MAX               ((CHANNEL_MAX + 1) * 6 - 1)
+#define HUE_MAX               ((0xF + 1) * 6 - 1)
 
 // Color is 12-bit (4-bit each R, G, B)
 #define COLOR(r, g, b)          ((r) + ((g) << 4) + ((b) << 8))
-#define COLOR_WHITE           COLOR(CHANNEL_MAX, CHANNEL_MAX, CHANNEL_MAX)
+#define COLOR_WHITE           COLOR(0xF, 0xF, 0xF)
 #define COLOR_BLACK           COLOR(0, 0, 0)
-#define COLOR_RED             COLOR(CHANNEL_MAX, 0, 0)
-#define COLOR_GREEN           COLOR(0, CHANNEL_MAX, 0)
-#define COLOR_BLUE            COLOR(0, 0, CHANNEL_MAX)
-#define COLOR_CYAN            COLOR(0,CHANNEL_MAX, CHANNEL_MAX)
-#define COLOR_MAGENTA         COLOR(CHANNEL_MAX, 0,CHANNEL_MAX)
-#define COLOR_YELLOW          COLOR(CHANNEL_MAX,CHANNEL_MAX, 0)
+#define COLOR_RED             COLOR(0xF, 0, 0)
+#define COLOR_GREEN           COLOR(0, 0xF, 0)
+#define COLOR_BLUE            COLOR(0, 0, 0xF)
+#define COLOR_CYAN            COLOR(0, 0xF, 0xF)
+#define COLOR_MAGENTA         COLOR(0xF, 0,0xF)
+#define COLOR_YELLOW          COLOR(0xF, 0xF, 0)
 #define COLOR_PURPLE          COLOR(0xa, 0x3, 0xd)
 #define COLOR_ORANGE          COLOR(0xf, 0x1, 0x0)
 #define COLOR_PALE_ORANGE     COLOR(0x8, 0x1, 0x0)
