@@ -74,7 +74,7 @@ uint32_t ChasingRainbow::Do() {
   } else {
     ++sequence_;
   }
-  return bulb_frame_;
+  return 500;
 }
 
 AlternateDirectionalWave::AlternateDirectionalWave(G35& g35)
@@ -231,7 +231,7 @@ uint32_t ChasingMultiColors::Do() {
   } else {
     ++sequence_;
   }
-  return bulb_frame_ * 6;
+  return 500;
 }
 
 ChasingWhiteRedBlue::ChasingWhiteRedBlue(G35& g35)
