@@ -25,6 +25,6 @@ color_t TwinkleClassic::classic_colors(uint16_t sequence) {
   	case 0: return COLOR_RED;
   	case 1: return COLOR_GREEN;
   	case 2: return COLOR_BLUE;
-  	case 3: return COLOR_YELLOW;
+  	case 3: return COLOR_ORANGE;
   }
 }
