@@ -22,10 +22,11 @@ uint32_t CandyCaneChase::Do() {
   } else {
     ++sequence_;
   }
-  return bulb_frame_;
+  return 250;
 }
 
 // static
 color_t CandyCaneChase::red_white(uint16_t sequence) {
+  printf("%d\n", sequence);
   return sequence % 2 ? COLOR_RED : COLOR_WHITE;
 }
